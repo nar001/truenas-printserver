@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM debian:latest
 
 # Set environment variables
 # AVAHI_PUBLISH_MODE=host uses host Avahi; bind-mount host /etc/avahi/services to AIRPRINT_SERVICES_DIR (default /airprint/avahi-services).
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     cups-client \
     cups-filters \
     cups-bsd \
-    cups-pdf \
+    printer-driver-cups-pdf \
     printer-driver-gutenprint \
     printer-driver-hpcups \
     hplip \
@@ -68,7 +68,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
 WORKDIR /
 
 RUN useradd -r -G lpadmin -M cups-admin && \
-    echo "cups-admin:admin" | chpasswd
+    echo "cups:cups" | chpasswd
 
 # Start all services
 CMD ["/start.sh"]
