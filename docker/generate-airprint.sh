@@ -19,8 +19,8 @@ CUPS_PRINTERS=$(lpstat -p 2>/dev/null | awk '{print $2}' || true)
 # Override per deployment if a queue lies about capabilities (e.g. monochrome label printer: set F,F).
 AIRPRINT_PDL="${AIRPRINT_PDL:-application/pdf,image/jpeg,image/png,image/urf,application/octet-stream,application/postscript}"
 AIRPRINT_URF="${AIRPRINT_URF:-W8,SRGB24,CP255,FN3}"
-AIRPRINT_COLOR="${AIRPRINT_COLOR:-T}"
-AIRPRINT_DUPLEX="${AIRPRINT_DUPLEX:-T}"
+AIRPRINT_COLOR="${AIRPRINT_COLOR:-F}"
+AIRPRINT_DUPLEX="${AIRPRINT_DUPLEX:-F}"
 
 # Remove old AirPrint services (except our template if present elsewhere)
 rm -f "${AVAHI_DIR}"/AirPrint-*.service
@@ -43,6 +43,7 @@ for printer in $CUPS_PRINTERS; do
   <service>
     <type>_ipp._tcp</type>
     <subtype>_universal._sub._ipp._tcp</subtype>
+    <service protocol="ipv4">
     <port>631</port>
     <txt-record>txtver=1</txt-record>
     <txt-record>qtotal=1</txt-record>
