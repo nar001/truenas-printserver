@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     printer-driver-cups-pdf \
     printer-driver-gutenprint \
     printer-driver-hpcups \
+    foomatic-db \
     hplip \
     samba \
     samba-common-bin \
