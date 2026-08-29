@@ -67,7 +67,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
 # Set working directory
 WORKDIR /
 
-RUN useradd -r -G lpadmin -M cups-admin && \
+RUN useradd -r -G lpadmin -M cups && \
     echo "cups:cups" | chpasswd
 
 # Start all services
