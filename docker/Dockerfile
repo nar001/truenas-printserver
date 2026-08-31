@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     inotify-tools \
     sudo \
     dbus \
+    nano \
     openssl \
     && rm -rf /var/lib/apt/lists/*
 
