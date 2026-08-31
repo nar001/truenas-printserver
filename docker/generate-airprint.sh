@@ -43,7 +43,6 @@ for printer in $CUPS_PRINTERS; do
   <service>
     <type>_ipp._tcp</type>
     <subtype>_universal._sub._ipp._tcp</subtype>
-    <service protocol="ipv4">
     <port>631</port>
     <txt-record>txtver=1</txt-record>
     <txt-record>qtotal=1</txt-record>
