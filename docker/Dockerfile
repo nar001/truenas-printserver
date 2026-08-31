@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:testing
 
 # Set environment variables
 # AVAHI_PUBLISH_MODE=host uses host Avahi; bind-mount host /etc/avahi/services to AIRPRINT_SERVICES_DIR (default /airprint/avahi-services).

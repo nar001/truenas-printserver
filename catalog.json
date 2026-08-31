@@ -9,7 +9,7 @@
         "networking",
         "media"
       ],
-      "home": "https://github.com/KaiHongTan/truenas-printserver",
+      "home": "https://github.com/nar001/truenas-printserver",
       "location": "trains/charts/truenas-printserver",
       "healthy": true,
       "healthy_error": null,
@@ -20,9 +20,9 @@
       "recommended": false,
       "maintainers": [
         {
-          "name": "Kai Hong Tan",
-          "email": "kaihong011108@gmail.com",
-          "url": "https://github.com/KaiHongTan"
+          "name": "nar001",
+          "email": "email@email.com",
+          "url": "https://github.com/nar001"
         }
       ],
       "tags": [
@@ -34,9 +34,9 @@
       ],
       "screenshots": [],
       "sources": [
-        "https://github.com/KaiHongTan/truenas-printserver"
+        "https://github.com/nar001/truenas-printserver"
       ],
-      "icon_url": "https://raw.githubusercontent.com/KaiHongTan/truenas-printserver/main/icon.svg"
+      "icon_url": "https://raw.githubusercontent.com/nar001/truenas-printserver/main/icon.svg"
     }
   }
 }
